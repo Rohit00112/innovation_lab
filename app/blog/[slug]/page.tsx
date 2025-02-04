@@ -1,0 +1,83 @@
+import { Suspense } from "react"
+import BlogPostContent from "./blog-post-content";
+
+const blogPosts = [
+  {
+    title: "The Future of Quantum Computing",
+    category: "Technology",
+    excerpt: "Exploring the revolutionary potential of quantum computing and its implications for solving complex problems.",
+    date: "March 1, 2024",
+    author: "Dr. Sarah Chen",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+  {
+    title: "Breakthrough in AI Research",
+    category: "Technology",
+    excerpt: "Our team has made significant progress in developing more efficient machine learning algorithms.",
+    date: "February 28, 2024",
+    author: "Dr. Michael Wong",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+  {
+    title: "Innovation in Healthcare",
+    category: "Innovation",
+    excerpt: "How technology is transforming patient care and medical research.",
+    date: "February 25, 2024",
+    author: "Dr. Emma Davis",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+  {
+    title: "Sustainable Energy Solutions",
+    category: "Research",
+    excerpt: "Latest developments in renewable energy technology and implementation.",
+    date: "February 22, 2024",
+    author: "Prof. James Wilson",
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+  {
+    title: "Community Impact Report",
+    category: "Community",
+    excerpt: "How our initiatives are making a difference in the local community.",
+    date: "February 20, 2024",
+    author: "Maria Garcia",
+    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+  {
+    title: "Future of Work",
+    category: "Innovation",
+    excerpt: "Exploring how technology is reshaping the workplace and career development.",
+    date: "February 18, 2024",
+    author: "Alex Johnson",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+  {
+    title: "Student Success Stories",
+    category: "Community",
+    excerpt: "Highlighting achievements of our student researchers and innovators.",
+    date: "February 15, 2024",
+    author: "Lisa Park",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  },
+]
+
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.title.toLowerCase().replace(/\s+/g, '-'),
+  }))
+}
+
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = blogPosts.find(
+    (post) => post.title.toLowerCase().replace(/\s+/g, '-') === params.slug
+  )
+
+  if (!post) {
+    return <div>Post not found</div>
+  }
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogPostContent post={post} />
+    </Suspense>
+  )
+}
