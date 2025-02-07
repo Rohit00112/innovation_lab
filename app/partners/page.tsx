@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Building2, Handshake, Globe, Users } from "lucide-react"
+import { PartnersPageData } from "@/types/partners"
+import partnersData from "@/data/pages/partners.json"
 
 export default function PartnersPage() {
   return (
@@ -84,7 +86,7 @@ export default function PartnersPage() {
               >
                 <Card className="p-6 text-center">
                   <div className="flex justify-center mb-4 text-primary">
-                    {benefit.icon}
+                    {benefitIcons[benefit.icon]}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-sm text-muted-foreground">{benefit.description}</p>
@@ -115,59 +117,10 @@ export default function PartnersPage() {
   )
 }
 
-const partners = [
-  {
-    name: "TechCorp Global",
-    type: "Industry",
-    description: "Leading technology solutions provider collaborating on AI and machine learning projects.",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    name: "Research Institute X",
-    type: "Research",
-    description: "Premier research institution partnering on quantum computing initiatives.",
-    logo: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    name: "EcoSolutions Inc",
-    type: "Sustainability",
-    description: "Environmental technology company working on green energy solutions.",
-    logo: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    name: "HealthTech Partners",
-    type: "Healthcare",
-    description: "Healthcare innovation company developing next-gen medical technologies.",
-    logo: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    name: "Future Education",
-    type: "Education",
-    description: "Educational institution pioneering new learning technologies.",
-    logo: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    name: "Smart City Solutions",
-    type: "Infrastructure",
-    description: "Urban technology company developing smart city infrastructure.",
-    logo: "https://images.unsplash.com/photo-1498736297812-3a08021f206f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-]
+const { partners, benefits } = partnersData as PartnersPageData
 
-const benefits = [
-  {
-    title: "Access to Innovation",
-    description: "Get early access to cutting-edge research and technology developments.",
-    icon: <Globe className="h-8 w-8" />,
-  },
-  {
-    title: "Collaborative Research",
-    description: "Work together on groundbreaking projects with our expert team.",
-    icon: <Handshake className="h-8 w-8" />,
-  },
-  {
-    title: "Network Growth",
-    description: "Connect with other industry leaders and expand your professional network.",
-    icon: <Users className="h-8 w-8" />,
-  },
-]
+const benefitIcons: any = {
+  Globe: <Globe className="h-8 w-8" />,
+  Handshake: <Handshake className="h-8 w-8" />,
+  Users: <Users className="h-8 w-8" />
+}

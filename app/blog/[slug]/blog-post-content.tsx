@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Calendar, Share2, Heart } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import CommentSection from "./comment-section"
+import Link from "next/link"
 
 interface BlogPost {
   title: string
@@ -18,34 +19,12 @@ interface BlogPost {
   image: string
 }
 
-const relatedPosts: BlogPost[] = [
-  {
-    title: "The Future of AI in Research",
-    category: "Technology",
-    excerpt: "Exploring how artificial intelligence is transforming research methodologies.",
-    date: "2024-01-20",
-    author: "Dr. Sarah Chen",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-  },
-  {
-    title: "Sustainable Innovation Practices",
-    category: "Innovation",
-    excerpt: "Best practices for implementing sustainable innovation in organizations.",
-    date: "2024-01-18",
-    author: "Michael Wong",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-  },
-  {
-    title: "Collaborative Research Methods",
-    category: "Research",
-    excerpt: "How collaboration is changing the landscape of modern research.",
-    date: "2024-01-15",
-    author: "Emma Davis",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-  }
-]
+import blogData from "@/data/pages/blog.json"
 
 export default function BlogPostContent({ post }: { post: BlogPost }) {
+  const relatedPosts = blogData.blogPosts
+    .filter((p) => p.category === post.category && p.title !== post.title)
+    .slice(0, 3)
 
   const handleComment = async () => {
     // TODO: Implement comment submission
@@ -123,65 +102,45 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
               <p className="text-muted-foreground mb-4">
                 Expert in {post.category} with extensive experience in research and innovation.
               </p>
-              <Button variant="outline" size="sm">
-                View Profile
-              </Button>
             </div>
           </div>
         </Card>
 
-        {/* Comments Section */}
+        {/* Related Articles */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Comments</h2>
-          <CommentSection postId={post.title.toLowerCase().replace(/\s+/g, '-')} />
-        </div>
-
-        {/* Related Posts */}
-        <div>
           <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {relatedPosts
-              .filter(relatedPost => 
-                relatedPost.title !== post.title && 
-                relatedPost.category === post.category
-              )
-              .map((relatedPost, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="overflow-hidden">
-                    <img
-                      src={relatedPost.image}
-                      alt={relatedPost.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <Badge className="mb-2">{relatedPost.category}</Badge>
-                      <h3 className="font-semibold mb-2">{relatedPost.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        {relatedPost.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <Avatar className="h-8 w-8">
-                            <AvatarImage src="/avatars/author.jpg" />
-                            <AvatarFallback>{relatedPost.author[0]}</AvatarFallback>
-                          </Avatar>
-                          <span className="text-sm text-muted-foreground">{relatedPost.author}</span>
-                        </div>
-                        <Button variant="link" className="p-0">
-                          Read More
-                        </Button>
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              ))}
+            {relatedPosts.map((relatedPost, index) => (
+              <Link
+                key={index}
+                href={`/blog/${relatedPost.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group"
+              >
+                <Card className="h-full overflow-hidden transition-transform group-hover:scale-[1.02]">
+                  <img
+                    src={relatedPost.image}
+                    alt={relatedPost.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <Badge className="mb-2">{relatedPost.category}</Badge>
+                    <h3 className="font-semibold mb-2 group-hover:text-primary">
+                      {relatedPost.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {relatedPost.excerpt}
+                    </p>
+                  </div>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
+
+        <Separator className="mb-12" />
+
+        {/* Comments Section */}
+        <CommentSection postId={""} />
       </div>
     </div>
   )

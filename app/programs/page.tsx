@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowRight } from "lucide-react"
+import { ProgramsPageData } from "@/types/programs"
+import programsData from "@/data/pages/programs.json"
 
 export default function ProgramsPage() {
   return (
@@ -157,73 +159,4 @@ function ProgramCard({
   )
 }
 
-const programs = [
-  {
-    title: "Advanced Research Initiative",
-    slug: "advanced-research-initiative",
-    category: "Research",
-    description: "Engage in cutting-edge research projects with industry experts and academic mentors.",
-    duration: "12 months",
-    format: "Full-time",
-    image: "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Innovation Accelerator",
-    category: "Innovation",
-    description: "Transform your ideas into viable products with expert guidance and resources.",
-    duration: "6 months",
-    format: "Part-time",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Tech Skills Bootcamp",
-    category: "Education",
-    description: "Intensive training in emerging technologies and digital skills.",
-    duration: "3 months",
-    format: "Full-time",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Design Thinking Workshop",
-    category: "Innovation",
-    description: "Learn and apply design thinking methodologies to solve complex problems.",
-    duration: "2 months",
-    format: "Part-time",
-    image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Data Science Fellowship",
-    category: "Research",
-    description: "Advanced research and practical applications in data science and AI.",
-    duration: "9 months",
-    format: "Full-time",
-    image: "https://images.unsplash.com/photo-1509869175650-a1d97972541a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Digital Marketing Course",
-    category: "Education",
-    description: "Master modern marketing techniques and strategies.",
-    duration: "4 months",
-    format: "Part-time",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-]
-
-const applicationSteps = [
-  {
-    title: "Choose Program",
-    description: "Browse our programs and select the one that aligns with your goals.",
-  },
-  {
-    title: "Submit Application",
-    description: "Complete the online application form with your details and requirements.",
-  },
-  {
-    title: "Interview",
-    description: "If shortlisted, attend an interview with our program coordinators.",
-  },
-  {
-    title: "Get Started",
-    description: "Upon acceptance, receive onboarding information and begin your journey.",
-  },
-]
+const { programs, applicationSteps } = programsData as ProgramsPageData

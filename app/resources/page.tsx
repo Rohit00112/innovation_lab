@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Search, Download, Book, FileText, ArrowRight, Folder } from "lucide-react"
+import { ResourcesPageData } from "@/types/resources"
+import resourcesData from "@/data/pages/resources.json"
 
 export default function ResourcesPage() {
   const [category, setCategory] = useState("all")
@@ -168,64 +170,4 @@ function ResourceCard({
   )
 }
 
-const resources = [
-  {
-    title: "Innovation Project Canvas",
-    category: "templates",
-    description: "A comprehensive template for planning and tracking innovation projects.",
-    format: "PDF",
-  },
-  {
-    title: "Design Thinking Toolkit",
-    category: "tools",
-    description: "Essential tools and methods for implementing design thinking in your projects.",
-    format: "ZIP",
-  },
-  {
-    title: "Research Methodology Guide",
-    category: "guides",
-    description: "Step-by-step guide to conducting effective research in innovation.",
-    format: "PDF",
-  },
-  {
-    title: "Project Management Templates",
-    category: "templates",
-    description: "Collection of templates for managing innovation projects effectively.",
-    format: "DOCX",
-  },
-  {
-    title: "Innovation Metrics Framework",
-    category: "tools",
-    description: "Tools for measuring and tracking innovation success metrics.",
-    format: "XLSX",
-  },
-  {
-    title: "Latest Research Papers",
-    category: "research",
-    description: "Recent publications and findings in innovation and technology.",
-    format: "PDF",
-  },
-]
-
-const collections = [
-  {
-    title: "Startup Toolkit",
-    description: "Essential resources for launching and growing innovative startups.",
-    itemCount: 12,
-  },
-  {
-    title: "Research Resources",
-    description: "Comprehensive collection of research tools and templates.",
-    itemCount: 8,
-  },
-  {
-    title: "Project Management",
-    description: "Tools for effective project planning and execution.",
-    itemCount: 15,
-  },
-  {
-    title: "Innovation Methods",
-    description: "Guides and templates for various innovation methodologies.",
-    itemCount: 10,
-  },
-]
+const { resources, collections } = resourcesData as ResourcesPageData

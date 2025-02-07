@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "title": "Smart City Infrastructure",
+      "category": "Technology",
+      "description": "Developing intelligent solutions for urban mobility and connectivity.",
+      "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "team": [
+        {
+          "name": "Alex Johnson",
+          "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        {
+          "name": "Sarah Chen",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        }
+      ]
+    },
+    {
+      "title": "Quantum Computing Research",
+      "category": "Research",
+      "description": "Exploring quantum algorithms for complex problem-solving.",
+      "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "team": [
+        {
+          "name": "Dr. Michael Wong",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        }
+      ]
+    },
+    {
+      "title": "Renewable Energy Solutions",
+      "category": "Sustainability",
+      "description": "Implementing sustainable energy systems for communities.",
+      "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "team": [
+        {
+          "name": "Emma Davis",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        {
+          "name": "James Wilson",
+          "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        }
+      ]
+    },
+    {
+      "title": "AI Healthcare Assistant",
+      "category": "Innovation",
+      "description": "AI-powered system for improved patient care and diagnosis.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "team": [
+        {
+          "name": "Dr. Lisa Park",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        }
+      ]
+    },
+    {
+      "title": "Blockchain Supply Chain",
+      "category": "Technology",
+      "description": "Transparent and secure supply chain management system.",
+      "image": "https://images.unsplash.com/photo-1561414927-6d86591d0c4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "team": [
+        {
+          "name": "Robert Zhang",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        }
+      ]
+    },
+    {
+      "title": "Ocean Cleanup Initiative",
+      "category": "Sustainability",
+      "description": "Innovative solutions for marine pollution reduction.",
+      "image": "https://images.unsplash.com/photo-1484291470158-b8f8d608850d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "team": [
+        {
+          "name": "Maria Garcia",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        }
+      ]
+    }
+  ]
+}

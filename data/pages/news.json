@@ -1,0 +1,78 @@
+{
+  "categories": [
+    "All",
+    "Innovation",
+    "Research",
+    "Technology",
+    "Events",
+    "Community"
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Breakthrough in Quantum Computing Research",
+      "excerpt": "Our research team has made significant progress in quantum computing stability.",
+      "content": "Our research team has achieved a significant breakthrough in quantum computing stability, paving the way for more reliable quantum computations. The new approach reduces decoherence and error rates, making quantum systems more practical for real-world applications.",
+      "category": "Research",
+      "author": "Dr. Jane Smith",
+      "date": "2024-02-15",
+      "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb",
+      "tags": ["quantum", "research", "technology"]
+    },
+    {
+      "id": "2",
+      "title": "Innovation Lab Launches New AI Initiative",
+      "excerpt": "Introducing our latest artificial intelligence research program focused on ethical AI development.",
+      "content": "The Innovation Lab is proud to announce the launch of our new AI initiative, focusing on the development of ethical and responsible artificial intelligence solutions. This program will bring together experts from various fields to ensure AI technology benefits society as a whole.",
+      "category": "Innovation",
+      "author": "Prof. Michael Chen",
+      "date": "2024-02-10",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      "tags": ["ai", "innovation", "ethics"]
+    },
+    {
+      "id": "3",
+      "title": "Community Workshop Series Announced",
+      "excerpt": "Join us for our upcoming series of workshops focusing on emerging technologies.",
+      "content": "We're excited to announce our new series of community workshops that will cover various emerging technologies. These hands-on sessions will provide participants with practical experience in areas such as AI, blockchain, and IoT.",
+      "category": "Community",
+      "author": "Sarah Johnson",
+      "date": "2024-02-08",
+      "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b",
+      "tags": ["workshop", "community", "learning"]
+    },
+    {
+      "id": "4",
+      "title": "New Technology Partnership Formed",
+      "excerpt": "Strategic collaboration with leading tech firms to accelerate innovation in sustainable technology.",
+      "content": "The Innovation Lab has formed a strategic partnership with leading technology companies to accelerate the development of sustainable technology solutions. This collaboration will focus on creating environmentally friendly innovations that address global challenges.",
+      "category": "Technology",
+      "author": "David Wilson",
+      "date": "2024-02-05",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      "tags": ["partnership", "technology", "sustainability"]
+    },
+    {
+      "id": "5",
+      "title": "Annual Innovation Summit 2024",
+      "excerpt": "Mark your calendars for the biggest innovation event of the year, featuring keynote speakers from around the globe.",
+      "content": "Get ready for our Annual Innovation Summit 2024, where industry leaders and innovators from around the world will gather to share insights and discuss the future of technology. The event will feature keynote speeches, workshops, and networking opportunities.",
+      "category": "Events",
+      "author": "Emma Thompson",
+      "date": "2024-02-01",
+      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2",
+      "tags": ["event", "summit", "networking"]
+    },
+    {
+      "id": "6",
+      "title": "Research Grant Program Expanded",
+      "excerpt": "New funding opportunities available for innovative research projects in emerging technologies.",
+      "content": "We're pleased to announce the expansion of our research grant program, offering increased funding opportunities for innovative projects in emerging technologies. This initiative aims to support groundbreaking research that pushes the boundaries of what's possible.",
+      "category": "Research",
+      "author": "Dr. Robert Lee",
+      "date": "2024-01-28",
+      "image": "https://images.unsplash.com/photo-1507413245164-6160d8298b31",
+      "tags": ["research", "funding", "innovation"]
+    }
+  ]
+}

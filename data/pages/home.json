@@ -1,0 +1,93 @@
+{
+  "programs": [
+    {
+      "title": "Research Innovation",
+      "category": "Research",
+      "description": "Collaborate on cutting-edge research projects with industry experts."
+    },
+    {
+      "title": "Startup Accelerator",
+      "category": "Entrepreneurship",
+      "description": "Transform your ideas into successful businesses with our mentorship program."
+    },
+    {
+      "title": "Tech Workshops",
+      "category": "Education",
+      "description": "Learn the latest technologies through hands-on workshops."
+    },
+    {
+      "title": "Design Thinking",
+      "category": "Innovation",
+      "description": "Master the art of problem-solving through design thinking."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Thompson",
+      "role": "Research Fellow",
+      "quote": "The Innovation Lab has been instrumental in bringing my research ideas to life. The collaborative environment and state-of-the-art facilities are unmatched.",
+      "rating": 5,
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
+    },
+    {
+      "name": "David Chen",
+      "role": "Startup Founder",
+      "quote": "The mentorship and resources provided by the Innovation Lab were crucial in helping me launch my successful tech startup.",
+      "rating": 5,
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
+    },
+    {
+      "name": "Emily Rodriguez",
+      "role": "Student Innovator",
+      "quote": "Being part of the Innovation Lab community has opened up countless opportunities and helped me grow both personally and professionally.",
+      "rating": 5,
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "title": "AI Innovation Summit",
+      "category": "Conference",
+      "date": "March 15, 2024",
+      "time": "9:00 AM - 5:00 PM",
+      "location": "Main Auditorium",
+      "image": "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "title": "Startup Pitch Day",
+      "category": "Competition",
+      "date": "March 20, 2024",
+      "time": "2:00 PM - 6:00 PM",
+      "location": "Innovation Hub",
+      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "title": "Design Thinking Workshop",
+      "category": "Workshop",
+      "date": "March 25, 2024",
+      "time": "10:00 AM - 3:00 PM",
+      "location": "Workshop Room 2",
+      "image": "https://images.unsplash.com/photo-1531498860502-7c67cf02f657?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    }
+  ],
+  "news": [
+    {
+      "title": "Innovation Lab Wins Excellence Award",
+      "category": "Awards",
+      "excerpt": "Our commitment to innovation and research has been recognized with the prestigious Excellence in Innovation Award.",
+      "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "title": "New Research Partnership Announced",
+      "category": "Partnerships",
+      "excerpt": "We're excited to announce our new partnership with leading tech companies to advance AI research.",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "title": "Student Project Receives Global Recognition",
+      "category": "Success Stories",
+      "excerpt": "Our student team's innovative solution for sustainable energy has gained international attention.",
+      "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    }
+  ]
+}

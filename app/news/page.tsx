@@ -7,49 +7,14 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Calendar, Search } from "lucide-react"
-
-interface Article {
-  id: string
-  title: string
-  excerpt: string
-  content: string
-  category: string
-  author: string
-  date: string
-  image: string
-  tags: string[]
-}
-
-const categories = [
-  "All",
-  "Innovation",
-  "Research",
-  "Technology",
-  "Events",
-  "Community",
-]
+import { Article, NewsPageData } from "@/types/news"
+import newsData from "@/data/pages/news.json"
 
 export default function NewsPage() {
   const [selectedCategory, setSelectedCategory] = React.useState("All")
   const [searchQuery, setSearchQuery] = React.useState("")
 
-  // Mock data - replace with actual API call
-  const articles: Article[] = [
-    {
-      id: "1",
-      title: "Breakthrough in Quantum Computing Research",
-      excerpt: "Our research team has made significant progress in quantum computing stability.",
-      content: "Full article content here...",
-      category: "Research",
-      author: "Dr. Jane Smith",
-      date: "2024-02-15",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb",
-      tags: ["quantum", "research", "technology"],
-    },
-    // Add more articles here
-  ]
-
-  const filteredArticles = articles.filter(article => {
+  const filteredArticles = newsData.articles.filter(article => {
     const matchesCategory = selectedCategory === "All" || article.category === selectedCategory
     const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
@@ -98,7 +63,7 @@ export default function NewsPage() {
               />
             </div>
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
+              {newsData.categories.map((category) => (
                 <Button
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}

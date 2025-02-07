@@ -17,6 +17,7 @@ import {
 import { Calendar as CalendarIcon, MapPin, Clock, Users } from "lucide-react"
 import { EventRegistration } from "./components/event-registration"
 import Link from "next/link"
+import eventsData from "@/data/pages/events.json"
 
 export default function EventsPage() {
   const [date, setDate] = useState<Date | undefined>(new Date())
@@ -87,35 +88,34 @@ export default function EventsPage() {
             <Card className="overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <img
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-                  alt="Workshop"
+                  src={eventsData.featuredWorkshop.image}
+                  alt={eventsData.featuredWorkshop.title}
                   className="w-full h-48 md:h-full object-cover"
                 />
                 <div className="p-8">
-                  <Badge className="mb-4">Workshop</Badge>
+                  <Badge className="mb-4">{eventsData.featuredWorkshop.category}</Badge>
                   <h3 className="text-2xl font-bold mb-4">
-                    Design Thinking Masterclass
+                    {eventsData.featuredWorkshop.title}
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    Join our intensive workshop on design thinking methodologies
-                    and their practical applications in solving complex problems.
+                    {eventsData.featuredWorkshop.description}
                   </p>
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center">
                       <CalendarIcon className="h-5 w-5 mr-2" />
-                      <span>March 15, 2024</span>
+                      <span>{eventsData.featuredWorkshop.date}</span>
                     </div>
                     <div className="flex items-center">
                       <Clock className="h-5 w-5 mr-2" />
-                      <span>9:00 AM - 5:00 PM</span>
+                      <span>{eventsData.featuredWorkshop.time}</span>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="h-5 w-5 mr-2" />
-                      <span>Innovation Lab, Main Campus</span>
+                      <span>{eventsData.featuredWorkshop.location}</span>
                     </div>
                     <div className="flex items-center">
                       <Users className="h-5 w-5 mr-2" />
-                      <span>Limited to 30 participants</span>
+                      <span>Limited to {eventsData.featuredWorkshop.capacity} participants</span>
                     </div>
                   </div>
                   <Button size="lg" onClick={() => {
@@ -221,41 +221,4 @@ function EventCard({
   )
 }
 
-const events = [
-  {
-    title: "AI in Healthcare Symposium",
-    type: "Conference",
-    description: "Explore the latest applications of AI in healthcare with leading experts.",
-    date: "March 10, 2024",
-    time: "9:00 AM - 6:00 PM",
-    location: "Main Auditorium",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Startup Pitch Day",
-    type: "Competition",
-    description: "Watch innovative startups pitch their ideas to industry experts.",
-    date: "March 12, 2024",
-    time: "2:00 PM - 5:00 PM",
-    location: "Innovation Hub",
-    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Web3 Workshop",
-    type: "Workshop",
-    description: "Hands-on workshop on blockchain and decentralized applications.",
-    date: "March 18, 2024",
-    time: "10:00 AM - 4:00 PM",
-    location: "Tech Lab",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Research Showcase",
-    type: "Exhibition",
-    description: "Annual exhibition of groundbreaking research projects.",
-    date: "March 25, 2024",
-    time: "11:00 AM - 7:00 PM",
-    location: "Exhibition Hall",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-]
+const events = eventsData.upcomingEvents

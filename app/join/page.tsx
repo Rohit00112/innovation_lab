@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Check, Heart, Users, Star, Trophy, HandHeart } from "lucide-react"
+import { JoinPageData } from "@/types/join"
+import joinData from "@/data/pages/join.json"
 
 export default function JoinPage() {
   const [formData, setFormData] = useState({
@@ -213,84 +215,19 @@ export default function JoinPage() {
   )
 }
 
-const membershipTiers = [
-  {
-    type: "Basic",
-    name: "Explorer",
-    price: 99,
-    benefits: [
-      "Access to common areas",
-      "Monthly workshops",
-      "Online resources",
-      "Community events",
-    ],
-    featured: false,
-  },
-  {
-    type: "Professional",
-    name: "Innovator",
-    price: 299,
-    benefits: [
-      "All Explorer benefits",
-      "Dedicated workspace",
-      "Priority event access",
-      "Mentorship sessions",
-      "Project collaboration",
-    ],
-    featured: true,
-  },
-  {
-    type: "Enterprise",
-    name: "Pioneer",
-    price: 999,
-    benefits: [
-      "All Innovator benefits",
-      "Private office space",
-      "Custom workshops",
-      "Research partnerships",
-      "Innovation consulting",
-    ],
-    featured: false,
-  },
-]
+const { membershipTiers, supportOptions: rawSupportOptions, volunteerOpportunities } = joinData as JoinPageData
 
 const supportOptions = [
   {
     icon: <Trophy className="h-8 w-8" />,
-    title: "Sponsor a Project",
-    description: "Support innovative research projects and help bring new ideas to life.",
+    ...rawSupportOptions[0]
   },
   {
     icon: <Star className="h-8 w-8" />,
-    title: "Equipment Donation",
-    description: "Donate equipment or resources to enhance our lab facilities.",
+    ...rawSupportOptions[1]
   },
   {
     icon: <Users className="h-8 w-8" />,
-    title: "Corporate Partnership",
-    description: "Partner with us for research, innovation, and talent development.",
-  },
-]
-
-const volunteerOpportunities = [
-  {
-    title: "Event Coordinator",
-    commitment: "Regular",
-    description: "Help organize and manage community events, workshops, and conferences.",
-  },
-  {
-    title: "Mentor",
-    commitment: "Flexible",
-    description: "Share your expertise and guide aspiring innovators in their projects.",
-  },
-  {
-    title: "Lab Assistant",
-    commitment: "Part-time",
-    description: "Support day-to-day operations and assist with research projects.",
-  },
-  {
-    title: "Community Ambassador",
-    commitment: "Regular",
-    description: "Represent the lab at events and help build our community network.",
-  },
+    ...rawSupportOptions[2]
+  }
 ]

@@ -21,6 +21,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { AuthModal } from "@/components/auth/auth-modal"
+import Image from "next/image"
+import logoimg from "@/public/logo.svg";
 
 export function Navigation() {
   const [authModalOpen, setAuthModalOpen] = React.useState(false);
@@ -29,7 +31,14 @@ export function Navigation() {
     <div className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center px-4 container mx-auto">
         <Link href="/" className="flex items-center space-x-2">
-          <Beaker className="h-6 w-6" />
+          {/* <Beaker className="h-6 w-6" /> */}
+          <Image
+            src={logoimg}
+            alt="Innovation Lab Logo"
+            width={60}
+            height={60}
+            className="h-6 w-6 bg-white"
+          />
           <span className="font-bold text-xl">Innovation Lab</span>
         </Link>
         
@@ -130,7 +139,7 @@ export function Navigation() {
           <SheetContent side="left" className="w-[300px] sm:w-[400px]">
             <nav className="flex flex-col gap-4">
               <Link href="/" className="flex items-center space-x-2">
-                <Beaker className="h-6 w-6" />
+              <Beaker className="h-6 w-6" />
                 <span className="font-bold text-xl">Innovation Lab</span>
               </Link>
               <NavigationMenuLink className="block px-3 py-2 text-sm font-medium transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">

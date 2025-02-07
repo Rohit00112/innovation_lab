@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Search, Image, Play, ArrowRight } from "lucide-react"
+import galleryData from "@/data/pages/gallery.json"
 
 export default function GalleryPage() {
   const [mediaType, setMediaType] = useState("all")
@@ -146,41 +147,4 @@ function MediaCard({
   )
 }
 
-const mediaItems = [
-  {
-    title: "Research Lab Overview",
-    type: "image",
-    description: "A comprehensive view of our state-of-the-art research facilities.",
-    thumbnail: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Innovation Hub Tour",
-    type: "360",
-    description: "Take a virtual walk through our collaborative workspace.",
-    thumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Project Demo: AI Healthcare",
-    type: "video",
-    description: "Watch our AI healthcare assistant in action.",
-    thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Digital Studio Setup",
-    type: "image",
-    description: "Our multimedia production and VR development space.",
-    thumbnail: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Robotics Lab Experience",
-    type: "360",
-    description: "Explore our robotics testing and development facility.",
-    thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Sustainable Tech Demo",
-    type: "video",
-    description: "Demonstration of our latest sustainable technology solutions.",
-    thumbnail: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-]
+const { mediaItems } = galleryData

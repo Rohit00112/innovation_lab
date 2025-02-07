@@ -14,12 +14,14 @@ import {
 } from "@/components/ui/select"
 import { ArrowRight, Search, Calendar, User } from "lucide-react"
 import Link from "next/link"
+import { BlogPost } from "@/types/blog"
+import blogData from "@/data/pages/blog.json"
 
 export default function BlogPage() {
   const [category, setCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
 
-  const filteredPosts = blogPosts.filter((post) => {
+  const filteredPosts = blogData.blogPosts.filter((post) => {
     const matchesCategory = category === "all" || post.category === category
     const matchesSearch = post.title
       .toLowerCase()
@@ -87,38 +89,37 @@ export default function BlogPage() {
           {/* Featured Post */}
           <div className="mb-12">
             <Link href="/blog/the-future-of-quantum-computing">
-            <Card className="overflow-hidden transition-transform hover:scale-[1.02]">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <img
-                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-                  alt="Featured Post"
-                  className="h-full object-cover"
-                />
-                <div className="p-8">
-                  <Badge className="mb-4">Featured</Badge>
-                  <h2 className="text-3xl font-bold mb-4">
-                    The Future of Quantum Computing
-                  </h2>
-                  <p className="text-muted-foreground mb-6">
-                    Exploring the revolutionary potential of quantum computing and
-                    its implications for solving complex problems.
-                  </p>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      <span>March 1, 2024</span>
+              <Card className="overflow-hidden transition-transform hover:scale-[1.02]">
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  <img
+                    src={blogData.featuredPost.image}
+                    alt={blogData.featuredPost.title}
+                    className="h-full object-cover"
+                  />
+                  <div className="p-8">
+                    <Badge className="mb-4">{blogData.featuredPost.category}</Badge>
+                    <h2 className="text-3xl font-bold mb-4">
+                      {blogData.featuredPost.title}
+                    </h2>
+                    <p className="text-muted-foreground mb-6">
+                      {blogData.featuredPost.excerpt}
+                    </p>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        <span>{blogData.featuredPost.date}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <User className="h-4 w-4 mr-2" />
+                        <span>{blogData.featuredPost.author}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <User className="h-4 w-4 mr-2" />
-                      <span>Dr. Sarah Chen</span>
+                    <div className="flex items-center text-primary hover:text-primary/80">
+                      Read Article <ArrowRight className="ml-2 h-4 w-4" />
                     </div>
-                  </div>
-                  <div className="flex items-center text-primary hover:text-primary/80">
-                    Read Article <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
             </Link>
           </div>
 
@@ -138,7 +139,7 @@ function BlogPostCard({
   post,
   index,
 }: {
-  post: typeof blogPosts[0]
+  post: BlogPost
   index: number
 }) {
   const slug = post.title.toLowerCase().replace(/\s+/g, '-');
@@ -179,54 +180,3 @@ function BlogPostCard({
     </motion.div>
   )
 }
-
-const blogPosts = [
-  {
-    title: "Breakthrough in AI Research",
-    category: "Technology",
-    excerpt: "Our team has made significant progress in developing more efficient machine learning algorithms.",
-    date: "February 28, 2024",
-    author: "Dr. Michael Wong",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Innovation in Healthcare",
-    category: "Innovation",
-    excerpt: "How technology is transforming patient care and medical research.",
-    date: "February 25, 2024",
-    author: "Dr. Emma Davis",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Sustainable Energy Solutions",
-    category: "Research",
-    excerpt: "Latest developments in renewable energy technology and implementation.",
-    date: "February 22, 2024",
-    author: "Prof. James Wilson",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Community Impact Report",
-    category: "Community",
-    excerpt: "How our initiatives are making a difference in the local community.",
-    date: "February 20, 2024",
-    author: "Maria Garcia",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Future of Work",
-    category: "Innovation",
-    excerpt: "Exploring how technology is reshaping the workplace and career development.",
-    date: "February 18, 2024",
-    author: "Alex Johnson",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-  {
-    title: "Student Success Stories",
-    category: "Community",
-    excerpt: "Highlighting achievements of our student researchers and innovators.",
-    date: "February 15, 2024",
-    author: "Lisa Park",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-  },
-]

@@ -14,32 +14,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { EventDetails as EventDetailsProps } from "@/types/events"
 
-interface EventDetailsProps {
-  event: {
-    id: string
-    title: string
-    date: string
-    time: string
-    location: string
-    capacity: number
-    description: string
-    category: string
-    image: string
-    agenda: Array<{
-      time: string
-      title: string
-      description: string
-    }>
-    speakers: Array<{
-      name: string
-      role: string
-      image: string
-    }>
-  }
-}
-
-export function EventDetails({ event }: EventDetailsProps) {
+export function EventDetails({ event }: { event: EventDetailsProps }) {
   const [isRegistrationOpen, setIsRegistrationOpen] = React.useState(false)
 
   return (

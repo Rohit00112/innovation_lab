@@ -1,0 +1,121 @@
+{
+  "team": [
+    {
+      "name": "Dr. Sarah Chen",
+      "role": "Director",
+      "bio": "With over 15 years of experience in innovation and research, Dr. Chen leads our strategic initiatives.",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "name": "Michael Rodriguez",
+      "role": "Head of Research",
+      "bio": "Michael brings extensive expertise in emerging technologies and research methodologies.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "name": "Dr. Emily Thompson",
+      "role": "Innovation Lead",
+      "bio": "Emily specializes in fostering creativity and driving innovative solutions across projects.",
+      "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    }
+  ],
+  "history": [
+    {
+      "year": "2018",
+      "title": "Foundation",
+      "description": "Establishment of Innovation Lab with a vision to foster technological advancement and research excellence."
+    },
+    {
+      "year": "2019",
+      "title": "First Major Project",
+      "description": "Successfully completed our first collaborative research project with industry partners."
+    },
+    {
+      "year": "2020",
+      "title": "Expansion",
+      "description": "Expanded our facilities to include state-of-the-art research labs and innovation spaces."
+    },
+    {
+      "year": "2021",
+      "title": "International Recognition",
+      "description": "Received international accreditation for our research programs and facilities."
+    },
+    {
+      "year": "2022",
+      "title": "Community Impact",
+      "description": "Launched successful community outreach programs and educational initiatives."
+    },
+    {
+      "year": "2023",
+      "title": "Digital Transformation",
+      "description": "Implemented cutting-edge digital infrastructure and virtual collaboration tools."
+    }
+  ],
+  "facilities": [
+    {
+      "name": "Research Labs",
+      "description": "State-of-the-art laboratories equipped with the latest technology for conducting advanced research.",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "name": "Innovation Hub",
+      "description": "A collaborative space designed for brainstorming, prototyping, and developing innovative solutions.",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "name": "Digital Studio",
+      "description": "Advanced digital equipment and software for multimedia content creation and virtual reality development.",
+      "image": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    }
+  ],
+  "achievements": [
+    {
+      "year": "2023",
+      "title": "Innovation Excellence Award",
+      "description": "Recognized for outstanding contributions to technological innovation and research."
+    },
+    {
+      "year": "2023",
+      "title": "Best Research Paper",
+      "description": "Our team's research on sustainable technology was published in a leading international journal."
+    },
+    {
+      "year": "2022",
+      "title": "Community Impact Award",
+      "description": "Honored for successful implementation of community-focused technology solutions."
+    },
+    {
+      "year": "2022",
+      "title": "Industry Partnership Excellence",
+      "description": "Established successful collaborations with leading technology companies."
+    },
+    {
+      "year": "2021",
+      "title": "Educational Innovation Award",
+      "description": "Recognized for innovative approaches in technology education and training."
+    },
+    {
+      "year": "2021",
+      "title": "Sustainability Initiative",
+      "description": "Launched successful green technology research programs and sustainable practices."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is Innovation Lab?",
+      "answer": "Innovation Lab is a collaborative research and development space where students, faculty, and industry partners come together to work on cutting-edge projects and innovative solutions."
+    },
+    {
+      "question": "How can I get involved?",
+      "answer": "There are multiple ways to get involved: join our research programs, attend workshops and events, apply for internships, or collaborate on projects. Check our Programs page for more details."
+    },
+    {
+      "question": "Do you offer mentorship programs?",
+      "answer": "Yes, we offer various mentorship programs connecting students and early-career professionals with experienced industry experts and researchers."
+    },
+    {
+      "question": "What facilities are available?",
+      "answer": "Our facilities include state-of-the-art research labs, prototyping workshops, collaboration spaces, and advanced computing resources."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "courses": [
+    {
+      "title": "Introduction to Innovation",
+      "description": "Learn the fundamentals of innovation and creative thinking",
+      "category": "Innovation",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "progress": 75
+    },
+    {
+      "title": "Design Thinking Basics",
+      "description": "Master the principles of design thinking methodology",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "progress": 45
+    },
+    {
+      "title": "Emerging Technologies",
+      "description": "Explore the latest trends in technology and their applications",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "progress": 30
+    }
+  ],
+  "workshops": [
+    {
+      "title": "Prototyping Workshop",
+      "description": "Hands-on workshop on rapid prototyping techniques",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "date": "April 15, 2024",
+      "duration": "4 hours"
+    },
+    {
+      "title": "Innovation Strategy",
+      "description": "Develop effective innovation strategies for your organization",
+      "category": "Strategy",
+      "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "date": "April 20, 2024",
+      "duration": "6 hours"
+    },
+    {
+      "title": "Digital Transformation",
+      "description": "Navigate the challenges of digital transformation",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "date": "April 25, 2024",
+      "duration": "5 hours"
+    }
+  ],
+  "tutorials": [
+    {
+      "title": "Design Sprint Guide",
+      "description": "Step-by-step guide to running effective design sprints",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "duration": "45 minutes",
+      "level": "Intermediate"
+    },
+    {
+      "title": "Problem Solving",
+      "description": "Advanced techniques for creative problem solving",
+      "category": "Innovation",
+      "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "duration": "30 minutes",
+      "level": "Beginner"
+    },
+    {
+      "title": "Future Trends",
+      "description": "Analysis of emerging trends and their impact",
+      "category": "Research",
+      "image": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "duration": "60 minutes",
+      "level": "Advanced"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Innovation Leadership",
+      "description": "Comprehensive certification for innovation leaders",
+      "category": "Leadership",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "duration": "12 weeks",
+      "level": "Advanced"
+    },
+    {
+      "title": "Design Methods",
+      "description": "Professional certification in design methodologies",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "duration": "8 weeks",
+      "level": "Intermediate"
+    },
+    {
+      "title": "Tech Innovation",
+      "description": "Certification in technological innovation",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "duration": "10 weeks",
+      "level": "Advanced"
+    }
+  ]
+}
