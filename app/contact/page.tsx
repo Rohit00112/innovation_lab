@@ -82,7 +82,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Phone</h3>
                       <p className="text-muted-foreground">
-                        Main: (555) 123-4567
+                        +977-9802776830
                       </p>
                     </div>
                   </div>

@@ -196,12 +196,12 @@ export default function Home() {
                     <Badge variant="secondary" className="mb-2 shadow-sm">
                       {programs[0].category}
                     </Badge>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground text-justify">
                       {programs[0].description}
                     </p>
-                    <Button variant="link" className="mt-4 p-0">
+                    {/* <Button variant="link" className="mt-4 p-0">
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    </Button> */}
                   </Card>
                 </div>
               </CarouselItem>
@@ -315,23 +315,36 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
-                    {event.link && (
-                      <Button className="w-full sm:w-auto" asChild>
-                        <Link 
-                          href={event.link}
-                          target="_blank"
-                        >
-                          Register Now <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    )}
-                    <Link 
-                      href="HandBook.pdf"
-                      target="_blank"
-                      className="inline-flex items-center justify-center sm:justify-start text-primary hover:text-primary/80 transition-colors duration-200 font-medium"
-                    >
-                      Read More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        {event.link && (
+                          <Button className="w-full sm:w-auto" asChild>
+                            <Link 
+                              href={event.link}
+                              target="_blank"
+                            >
+                              Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                          </Button>
+                        )}
+                        
+                        {!event.link && (
+                          <div className="text-secondary-foreground font-bold">
+                            Registration opens soon
+                          </div>
+                        )}
+
+                        {event.readmore && (
+                          <Button variant="link" className="p-0" asChild>
+                            <Link 
+                              href={event.readmore}
+                              target="_blank"
+                              className="inline-flex items-center justify-center sm:justify-start"
+                            >
+                              Read More <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </Card>

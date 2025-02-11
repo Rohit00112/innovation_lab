@@ -166,14 +166,14 @@ export default function AboutPage() {
                   }}
                 >
                   <Card className="p-4 md:p-6">
-                    <div className={`flex items-center gap-2 md:gap-4 mb-4 ${index % 2 === 0 ? 'justify-start' : 'md:justify-end'}`}>
+                    <div className={`flex items-center gap-2 md:gap-4 mb-4 `}>
                       <Badge className="px-2 md:px-3 py-1 order-1 md:order-none">{item.year}</Badge>
                       {item.title === "Foundation" && <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
                       {item.title === "IIC Quest" && <Laptop className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
                       {item.title === "IIC Quest 2.0" && <Laptop className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-left">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed text-justify">{item.description}</p>
                   </Card>
                 </div>
               </motion.div>
@@ -194,21 +194,17 @@ export default function AboutPage() {
             >
               <h2 className="text-4xl font-bold mb-2">A part of Itahari International College</h2>
               <div className="space-y-6">
-                <p className="text-lg text-muted-foreground">
-                  Innovation Lab is a part of the Itahari International College, a renowned
-                  institution in the field of engineering and technology. We are proud to be
-                  part of this prestigious institution, known for its excellence in engineering
-                  and technology.
+                <p className="text-muted-foreground text-justify">
+                Aligned with IIC's mission to transform lives through education, 
+                the Innovation Lab offers students practical opportunities to apply their knowledge, fostering creativity and technological advancement. By engaging in collaborative projects within the lab, students enhance their skills, preparing them to become globally competitive graduates.
                 </p>
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
-                    <Building2 className="h-6 w-6 text-primary mt-1" />
+                    <ArrowUpRight className="h-8 w-8 text-primary" />
                     <div>
-                      <h3 className="font-semibold mb-2">Collaborative Environment</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Our integration with IIC creates a dynamic ecosystem where academic
-                        excellence meets practical innovation, fostering groundbreaking research
-                        and development.
+                      <h3 className="font-semibold mb-2">Our Vision</h3>
+                      <p className="text-sm text-muted-foreground text-justify">
+                      To cultivate a culture where students transform ideas into innovative solutions, develop into adaptable professionals, and emerge as leaders in their respective fields.
                       </p>
                     </div>
                   </div>
