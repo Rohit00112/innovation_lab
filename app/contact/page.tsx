@@ -93,7 +93,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Email</h3>
                       <p className="text-muted-foreground">
-                        General: innovation.lab@iic.edu.np
+                      innovation.lab@iic.edu.np
                       </p>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-center mb-12">Find Us</h2>
           <Card className="overflow-hidden">
             <iframe
-              src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.3040468045287!2d${87.30237694989367}!3d${26.655715311078577}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c3912a93715%3A0x9e87b26012C23F0E!2sInnovation%20Lab!5e0!3m2!1sen!2snp!4v1647891702983!5m2!1sen!2snp`}
+              src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.3040468045287!2d${87.30237694989367}!3d${26.655715311078577}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c3912a93715%3A0x9e87b26012C23F0E!2sInnovation%20Lab!5e0!3m2!1sen!2snp!4v1647891702983!5m2!1sen!2snp&markers=color:red|${26.655715311078577},${87.30237694989367}`}
               width="100%"
               height="450"
               style={{ border: 0 }}

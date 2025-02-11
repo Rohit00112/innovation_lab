@@ -166,8 +166,8 @@ export default function AboutPage() {
                   }}
                 >
                   <Card className="p-4 md:p-6">
-                    <div className={`flex items-center gap-2 md:gap-4 mb-4 `}>
-                      <Badge className="px-2 md:px-3 py-1 order-1 md:order-none">{item.year}</Badge>
+                    <div className="flex items-center gap-2 md:gap-4 mb-4 justify-start">
+                      <Badge className="px-2 md:px-3 py-1">{item.year}</Badge>
                       {item.title === "Foundation" && <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
                       {item.title === "IIC Quest" && <Laptop className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
                       {item.title === "IIC Quest 2.0" && <Laptop className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
@@ -195,15 +195,14 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold mb-2">A part of Itahari International College</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground text-justify">
-                Aligned with IIC's mission to transform lives through education, 
-                the Innovation Lab offers students practical opportunities to apply their knowledge, fostering creativity and technological advancement. By engaging in collaborative projects within the lab, students enhance their skills, preparing them to become globally competitive graduates.
+                Aligned with IIC's mission to transform lives through education, the Innovation Lab offers students practical opportunities to apply their knowledge, fostering creativity and technological advancement. By engaging in collaborative projects within the lab, students enhance their skills, preparing them to become globally competitive graduates.
                 </p>
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
-                    <ArrowUpRight className="h-8 w-8 text-primary" />
+                    <Building2 className="h-10 w-10 text-primary mt-1" />
                     <div>
                       <h3 className="font-semibold mb-2">Our Vision</h3>
-                      <p className="text-sm text-muted-foreground text-justify">
+                      <p className="text-sm text-muted-foreground">
                       To cultivate a culture where students transform ideas into innovative solutions, develop into adaptable professionals, and emerge as leaders in their respective fields.
                       </p>
                     </div>

@@ -199,9 +199,9 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground text-justify">
                       {programs[0].description}
                     </p>
-                    {/* <Button variant="link" className="mt-4 p-0">
+                    <Button variant="link" className="mt-4 p-0">
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button> */}
+                    </Button>
                   </Card>
                 </div>
               </CarouselItem>
@@ -314,8 +314,7 @@ export default function Home() {
                         <span>{event.location}</span>
                       </div>
                     </div>
-                    <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
-                      <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
                         {event.link && (
                           <Button className="w-full sm:w-auto" asChild>
                             <Link 
@@ -332,7 +331,6 @@ export default function Home() {
                             Registration opens soon
                           </div>
                         )}
-
                         {event.readmore && (
                           <Button variant="link" className="p-0" asChild>
                             <Link 
@@ -345,7 +343,6 @@ export default function Home() {
                           </Button>
                         )}
                       </div>
-                    </div>
                   </div>
                 </Card>
               </motion.div>
