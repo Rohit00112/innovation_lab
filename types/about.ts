@@ -21,6 +21,7 @@ export interface Achievement {
   year: string
   title: string
   description: string
+  video: string
 }
 
 export interface FAQ {

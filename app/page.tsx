@@ -12,33 +12,85 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { ArrowRight, Users, Trophy, Lightbulb, Calendar, Star, Clock, MapPin } from "lucide-react"
+import { ArrowRight, Users, Trophy, Lightbulb, Calendar, Star, Clock, MapPin, X } from "lucide-react"
 import Link from "next/link"
-import { StatsCardProps, Program, Testimonial, Event, NewsItem } from "@/types/home"
 import homeData from "@/data/pages/home.json"
+import { Video } from "@/components/ui/video"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
+  const [showEventModal, setShowEventModal] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    // Show modal on mount
+    setShowEventModal(true)
   }, [])
 
   if (!mounted) return null
 
+  const nextEvent = upcomingEvents[0] // Assuming the first event is the next one
+
   return (
     <div>
-      {/* Hero Section */}
+      {/* Event Modal */}
+      {showEventModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="relative w-full max-w-2xl bg-background rounded-lg shadow-lg p-6 m-4">
+            <button
+              onClick={() => setShowEventModal(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <h2 className="text-2xl font-bold mb-4">Next Upcoming Event</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="relative h-64 rounded-lg overflow-hidden">
+                <img
+                  src={nextEvent.image}
+                  alt={nextEvent.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <Badge className="mb-2">{nextEvent.category}</Badge>
+                <h3 className="text-xl font-semibold mb-4">{nextEvent.title}</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>{nextEvent.date}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-4 w-4 mr-2" />
+                    <span>{nextEvent.time}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    <span>{nextEvent.location}</span>
+                  </div>
+                </div>
+                <Button className="mt-6" asChild>
+                  <Link href="/events">
+                    Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Rest of the page content */}
       <section className="relative h-[70vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80')",
+            backgroundImage: "url('Hero.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,8 +98,8 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center text-white px-4"
         >
-          <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6">
-            Welcome to Innovation Lab
+          <h1 className="text-4xl md:text-7xl font-bold mb-3 md:mb-2">
+          Welcome to Innovation Lab
           </h1>
           <p className="text-lg md:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto">
             Where ideas transform into reality through collaboration, research, and innovation
@@ -61,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <StatsCard
@@ -86,10 +138,12 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
+
+
 
       {/* Featured Programs */}
-      <section className="py-20 bg-muted/50">
+      {/* <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Featured Programs</h2>
           <Carousel className="max-w-5xl mx-auto">
@@ -117,10 +171,42 @@ export default function Home() {
             <CarouselNext />
           </Carousel>
         </div>
+      </section> */}
+
+{/* <section className="py-20 bg-muted/50"> */}
+<section className="py-20 bg-background">
+        <div className="container mx-auto px-12">
+          <h2 className="text-4xl font-bold text-center mb-12">Featured Programs</h2>
+          <Carousel className="max-w-8xl mx-auto">
+            <CarouselContent>
+              <CarouselItem className="basis-full">
+                <div className="p-1">
+                  <Card className="p-4 mx-auto">
+                    <h3 className="font-semibold mb-2">{programs[0].title}</h3>
+                    <div className="aspect-video mb-4 rounded-lg overflow-hidden">
+                      <Video embedCode={programs[0].video} />
+              </div>
+                    <Badge variant="secondary" className="mb-2">
+                      {programs[0].category}
+                    </Badge>
+                    <p className="text-sm text-muted-foreground">
+                      {programs[0].description}
+                    </p>
+                    <Button variant="link" className="mt-4 p-0">
+                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Card>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
       </section>
 
       {/* Latest News */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Latest News</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -145,7 +231,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 bg-muted/50">
@@ -188,7 +274,8 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+          <div className="flex justify-center">
             {upcomingEvents.map((event, index) => (
               <motion.div
                 key={index}
@@ -196,6 +283,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="w-96"
               >
                 <Card className="overflow-hidden">
                   <img

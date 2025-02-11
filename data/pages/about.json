@@ -21,34 +21,19 @@
   ],
   "history": [
     {
-      "year": "2018",
+      "year": "15th September 2022",
       "title": "Foundation",
       "description": "Establishment of Innovation Lab with a vision to foster technological advancement and research excellence."
     },
     {
-      "year": "2019",
-      "title": "First Major Project",
-      "description": "Successfully completed our first collaborative research project with industry partners."
+      "year": "29th May 2023",
+      "title": "IIC Quest",
+      "description": "IIC Quest is a groundbreaking initiative that brings together students, faculty, and industry partners to explore innovative solutions for real-world challenges."
     },
     {
-      "year": "2020",
-      "title": "Expansion",
-      "description": "Expanded our facilities to include state-of-the-art research labs and innovation spaces."
-    },
-    {
-      "year": "2021",
-      "title": "International Recognition",
-      "description": "Received international accreditation for our research programs and facilities."
-    },
-    {
-      "year": "2022",
-      "title": "Community Impact",
-      "description": "Launched successful community outreach programs and educational initiatives."
-    },
-    {
-      "year": "2023",
-      "title": "Digital Transformation",
-      "description": "Implemented cutting-edge digital infrastructure and virtual collaboration tools."
+      "year": "12th June 2025",
+      "title": "IIC Quest 2.0",
+      "description": "IIC Quest 2.0 is a transformative initiative that brings together students, faculty, and industry partners to explore innovative solutions for real-world challenges."
     }
   ],
   "facilities": [
@@ -70,34 +55,22 @@
   ],
   "achievements": [
     {
-      "year": "2023",
-      "title": "Innovation Excellence Award",
-      "description": "Recognized for outstanding contributions to technological innovation and research."
+      "year": "11th December 2024",
+      "title": "ACES Techfest 7.0 Datathon Winner",
+      "video": "<div style=\"padding:177.78% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1055133564?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"AcesTechFestDataThon\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+      "description": "Members from the Innovation Lab team won the ACES Techfest 7.0 Datathon, showcasing their innovative analysis of real-world datasets and their solutions."
     },
     {
-      "year": "2023",
-      "title": "Best Research Paper",
-      "description": "Our team's research on sustainable technology was published in a leading international journal."
+      "year": "11th December 2024",
+      "title": "ACES Techfest 7.0 UI/UX Winner",
+      "video": "<div style=\"padding:177.78% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1055133595?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"AcesTechFestUI:UX\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+      "description": "A member from our team demonstrated exceptional creativity and user-centered design thinking and won the UI/UX competition at ACES Techfest 7.0."
     },
     {
-      "year": "2022",
-      "title": "Community Impact Award",
-      "description": "Honored for successful implementation of community-focused technology solutions."
-    },
-    {
-      "year": "2022",
-      "title": "Industry Partnership Excellence",
-      "description": "Established successful collaborations with leading technology companies."
-    },
-    {
-      "year": "2021",
-      "title": "Educational Innovation Award",
-      "description": "Recognized for innovative approaches in technology education and training."
-    },
-    {
-      "year": "2021",
-      "title": "Sustainability Initiative",
-      "description": "Launched successful green technology research programs and sustainable practices."
+      "year": "24th January 2025",
+      "title": "X-Hack 3.0",
+      "video": "<br><div style=\"padding:177.78% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1055133654?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"CS50XNepal\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+      "description": "Team members developed Swastha Sahayog, a comprehensive healthcare platform integrating appointment booking, consultations, and community features."
     }
   ],
   "faqs": [

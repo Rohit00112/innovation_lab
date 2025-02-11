@@ -5,8 +5,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
-import { CookieConsent } from "@/components/cookie-consent";
-import { Chatbot } from "@/components/chatbot";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,8 +26,6 @@ export default function RootLayout({
           <main className="min-h-screen" role="main" aria-label="Main content">{children}</main>
           <Footer />
           <Toaster />
-          <CookieConsent />
-          <Chatbot />
         </ThemeProvider>
       </body>
     </html>

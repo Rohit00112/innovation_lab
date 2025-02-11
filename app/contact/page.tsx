@@ -56,13 +56,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Visit Us</h3>
                       <p className="text-muted-foreground">
-                        Innovation Lab
+                        Itahari International College
                         <br />
-                        123 Tech Street
-                        <br />
-                        Innovation District
-                        <br />
-                        City, State 12345
+                        Sundarharaicha - 04, Morang, Nepal
                       </p>
                     </div>
                   </div>
@@ -73,11 +69,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Hours</h3>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 9:00 AM - 6:00 PM
+                        Sunday - Friday: 8:00 AM - 4:00 PM
                         <br />
-                        Saturday: 10:00 AM - 4:00 PM
-                        <br />
-                        Sunday: Closed
+                        Saturday: Closed
                       </p>
                     </div>
                   </div>
@@ -89,8 +83,6 @@ export default function ContactPage() {
                       <h3 className="font-semibold mb-2">Phone</h3>
                       <p className="text-muted-foreground">
                         Main: (555) 123-4567
-                        <br />
-                        Support: (555) 987-6543
                       </p>
                     </div>
                   </div>
@@ -102,8 +94,6 @@ export default function ContactPage() {
                       <h3 className="font-semibold mb-2">Email</h3>
                       <p className="text-muted-foreground">
                         General: info@innovationlab.com
-                        <br />
-                        Support: support@innovationlab.com
                       </p>
                     </div>
                   </div>

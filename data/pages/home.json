@@ -1,73 +1,29 @@
 {
   "programs": [
     {
-      "title": "Research Innovation",
-      "category": "Research",
-      "description": "Collaborate on cutting-edge research projects with industry experts."
-    },
-    {
-      "title": "Startup Accelerator",
-      "category": "Entrepreneurship",
-      "description": "Transform your ideas into successful businesses with our mentorship program."
-    },
-    {
-      "title": "Tech Workshops",
-      "category": "Education",
-      "description": "Learn the latest technologies through hands-on workshops."
-    },
-    {
-      "title": "Design Thinking",
-      "category": "Innovation",
-      "description": "Master the art of problem-solving through design thinking."
+      "title": "IIC Quest 2.0",
+      "category": "Event",
+      "video": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1055129173?badge=0&amp;autopause=0&amp;autoplay=1&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"IICQuest\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+      "description": "IIC Quest is an flagship event organuized by Innovation Lab which iterates every year to bring together students, faculty, and industry professionals to explore and innovate in the world of Innovation and Creativity."
     }
   ],
   "testimonials": [
     {
-      "name": "Sarah Thompson",
-      "role": "Research Fellow",
+      "name": "Er. Santosh Parajuli",
+      "role": "Program Leader BIT",
       "quote": "The Innovation Lab has been instrumental in bringing my research ideas to life. The collaborative environment and state-of-the-art facilities are unmatched.",
       "rating": 5,
       "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
-    },
-    {
-      "name": "David Chen",
-      "role": "Startup Founder",
-      "quote": "The mentorship and resources provided by the Innovation Lab were crucial in helping me launch my successful tech startup.",
-      "rating": 5,
-      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
-    },
-    {
-      "name": "Emily Rodriguez",
-      "role": "Student Innovator",
-      "quote": "Being part of the Innovation Lab community has opened up countless opportunities and helped me grow both personally and professionally.",
-      "rating": 5,
-      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
     }
   ],
   "upcomingEvents": [
     {
-      "title": "AI Innovation Summit",
-      "category": "Conference",
-      "date": "March 15, 2024",
-      "time": "9:00 AM - 5:00 PM",
-      "location": "Main Auditorium",
+      "title": "Creative Clash",
+      "category": "Event",
+      "date": "20th-21th  February 2025",
+      "time": "8:00 AM - 4:00 PM",
+      "location": "Itahari International College",
       "image": "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-    },
-    {
-      "title": "Startup Pitch Day",
-      "category": "Competition",
-      "date": "March 20, 2024",
-      "time": "2:00 PM - 6:00 PM",
-      "location": "Innovation Hub",
-      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-    },
-    {
-      "title": "Design Thinking Workshop",
-      "category": "Workshop",
-      "date": "March 25, 2024",
-      "time": "10:00 AM - 3:00 PM",
-      "location": "Workshop Room 2",
-      "image": "https://images.unsplash.com/photo-1531498860502-7c67cf02f657?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
     }
   ],
   "news": [

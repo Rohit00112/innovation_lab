@@ -12,6 +12,7 @@ import {
 import { Users2, Target, Heart, Trophy, Building2, Award, Microscope, ArrowUpRight, Laptop } from "lucide-react"
 import { AboutPageData } from "@/types/about"
 import aboutData from "@/data/pages/about.json"
+import { Video } from "@/components/ui/video"
 
 export default function AboutPage() {
   const { team, history, facilities, achievements, faqs } = aboutData as AboutPageData
@@ -44,7 +45,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 md:py-20 bg-background">
+      {/* <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <motion.div
@@ -74,10 +75,10 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Values */}
-      <section className="py-12 md:py-20 bg-muted/50">
+      {/* <section className="py-12 md:py-20 bg-muted/50">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Our Core Values</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -103,10 +104,10 @@ export default function AboutPage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -134,7 +135,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Lab History */}
       <section className="py-20 bg-background">
@@ -155,11 +156,8 @@ export default function AboutPage() {
                   <Card className="p-6">
                     <div className="flex items-center gap-4 mb-4 justify-start">
                       {item.title === "Foundation" && <Building2 className="h-6 w-6 text-primary" />}
-                      {item.title === "First Major Project" && <Target className="h-6 w-6 text-primary" />}
-                      {item.title === "Expansion" && <ArrowUpRight className="h-6 w-6 text-primary" />}
-                      {item.title === "International Recognition" && <Award className="h-6 w-6 text-primary" />}
-                      {item.title === "Community Impact" && <Users2 className="h-6 w-6 text-primary" />}
-                      {item.title === "Digital Transformation" && <Laptop className="h-6 w-6 text-primary" />}
+                      {item.title === "IIC Quest" && <Laptop className="h-6 w-6 text-primary" />}
+                      {item.title === "IIC Quest 2.0" && <Laptop className="h-6 w-6 text-primary" />}
                       <Badge className="px-3 py-1">{item.year}</Badge>
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
@@ -223,7 +221,7 @@ export default function AboutPage() {
       </section>
 
       {/* Facilities */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Facilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -253,10 +251,12 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements */}
-      <section className="py-20 bg-muted/50">
+      {/* <section className="py-20 bg-muted/50"> */}
+      <section className="py-20 bg-background">
+
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -268,12 +268,15 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6">
+                <Card className="p-6 max-w-xl mx-auto">
                   <div className="flex items-start gap-4">
-                    <Award className="h-8 w-8 text-primary mt-1" />
+                    <Award className="h-24 w-24 text-primary mt-1" />
                     <div>
                       <Badge className="mb-2">{achievement.year}</Badge>
                       <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
+                      <div className="aspect-video mb-4 rounded-lg">
+                      <Video embedCode={achievement.video} />
+              </div>
                       <p className="text-sm text-muted-foreground">{achievement.description}</p>
                     </div>
                   </div>
@@ -285,7 +288,7 @@ export default function AboutPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">
             Frequently Asked Questions
@@ -301,7 +304,7 @@ export default function AboutPage() {
             </Accordion>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

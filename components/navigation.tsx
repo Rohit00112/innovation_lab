@@ -139,20 +139,20 @@ export function Navigation() {
           <SheetContent side="left" className="w-[300px] sm:w-[400px]">
             <nav className="flex flex-col gap-4">
               <Link href="/" className="flex items-center space-x-2">
-              <Beaker className="h-6 w-6" />
+                <Beaker className="h-6 w-6" />
                 <span className="font-bold text-xl">Innovation Lab</span>
               </Link>
-              <NavigationMenuLink className="block px-3 py-2 text-sm font-medium transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-                  Home
-                </NavigationMenuLink>
+              <Link href="/" className="block py-2 hover:text-primary">
+                Home
+              </Link>
               <Link href="/about" className="block py-2 hover:text-primary">About</Link>
               <Link href="/programs" className="block py-2 hover:text-primary">Programs</Link>
               <Link href="/projects" className="block py-2 hover:text-primary">Projects</Link>
               <Link href="/resources" className="block py-2 hover:text-primary">Resources</Link>
               <Link href="/community" className="block py-2 hover:text-primary">Community</Link>
               <Link href="/contact" className="block py-2 hover:text-primary">Contact</Link>
-              <Link href="/login" className="block py-2 hover:text-primary">Login</Link>
-              <Link href="/signup" className="block py-2 hover:text-primary">Sign Up</Link>
+              {/* <Link href="/login" className="block py-2 hover:text-primary">Login</Link>
+              <Link href="/signup" className="block py-2 hover:text-primary">Sign Up</Link> */}
               <Link href="/join" className="block py-2 hover:text-primary">Join Now</Link>
             </nav>
           </SheetContent>
@@ -160,7 +160,7 @@ export function Navigation() {
 
         <div className="ml-auto flex items-center space-x-4">
           <ModeToggle />
-          <Button
+          {/* <Button
             variant="ghost"
             onClick={() => {
               setAuthType("login");
@@ -180,7 +180,7 @@ export function Navigation() {
           <AuthModal
             open={authModalOpen}
             onOpenChange={setAuthModalOpen}
-          />
+          /> */}
         </div>
       </div>
     </div>
