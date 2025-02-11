@@ -20,16 +20,16 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
+            backgroundImage: "url('About.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Journey</h2>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-primary" />
             {history.map((item, index) => (
               <motion.div
                 key={index}
@@ -150,15 +150,26 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className={`flex items-center justify-${index % 2 === 0 ? 'end' : 'start'} relative mb-12`}
+                className="flex relative mb-12"
+                style={{
+                  justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end'
+                }}
               >
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
+                <div 
+                  className={`w-1/2 ${index % 2 === 0 ? 'ml-0' : 'mr-0'}`}
+                  style={{
+                    paddingLeft: index % 2 === 0 ? '0' : '3rem',
+                    paddingRight: index % 2 === 0 ? '3rem' : '0',
+                    textAlign: index % 2 === 0 ? 'left' : 'right'
+                  }}
+                >
                   <Card className="p-6">
-                    <div className="flex items-center gap-4 mb-4 justify-start">
+                    <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                      {index % 2 === 1 && <Badge className="px-3 py-1">{item.year}</Badge>}
                       {item.title === "Foundation" && <Building2 className="h-6 w-6 text-primary" />}
                       {item.title === "IIC Quest" && <Laptop className="h-6 w-6 text-primary" />}
                       {item.title === "IIC Quest 2.0" && <Laptop className="h-6 w-6 text-primary" />}
-                      <Badge className="px-3 py-1">{item.year}</Badge>
+                      {index % 2 === 0 && <Badge className="px-3 py-1">{item.year}</Badge>}
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
@@ -180,12 +191,13 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">Our Partnership with IIC</h2>
+              <h2 className="text-4xl font-bold mb-2">A part of Itahari International College</h2>
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground">
-                  The Innovation Lab is proud to be an integral part of Itahari International
-                  College (IIC). This strategic partnership enhances our ability to provide
-                  cutting-edge resources and opportunities to students and researchers.
+                  Innovation Lab is a part of the Itahari International College, a renowned
+                  institution in the field of engineering and technology. We are proud to be
+                  part of this prestigious institution, known for its excellence in engineering
+                  and technology.
                 </p>
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
@@ -207,14 +219,18 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative h-[400px] rounded-lg overflow-hidden"
+              className="relative rounded-lg overflow-hidden"
             >
-              <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-                alt="College Campus"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20" />
+              <div style={{padding:"56.25% 0 0 0", position:"relative"}}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1055453708?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                  style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}} 
+                  title="IIC"
+                />
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
             </motion.div>
           </div>
         </div>

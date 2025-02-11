@@ -10,10 +10,10 @@
   "testimonials": [
     {
       "name": "Er. Santosh Parajuli",
-      "role": "Program Leader BIT",
-      "quote": "The Innovation Lab has been instrumental in bringing my research ideas to life. The collaborative environment and state-of-the-art facilities are unmatched.",
+      "role": "Programme Leader - BIT",
+      "quote": "The Innovation Lab at Itahari International College is a hub for Collaboration, Research and Innovation. This space fosters problem-solving, entrepreneurship, and Creativity , preparing students for future challenges. It has greatly enhanced academic excellence while inspiring innovation-driven mindsets. I am proud to lead this initiative, shaping the next generation of innovators.",
       "rating": 5,
-      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
+      "avatar": "Santosh_Parajuli.jpg"
     }
   ],
   "upcomingEvents": [
@@ -23,7 +23,17 @@
       "date": "20th-21th  February 2025",
       "time": "8:00 AM - 4:00 PM",
       "location": "Itahari International College",
-      "image": "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+      "image": "CreativeClash.png",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSf3O_Jd52RcOogmRqDzEuOWNJbThEM3QY7qt69RRRYlY2tB-w/viewform?usp=header"
+    },
+    {
+      "title": "IIC Quest 3.0",
+      "category": "Event",
+      "date": "Comming Soon",
+      "time": "Comming Soon",
+      "location": "Itahari International College",
+      "image": "Quest.png",
+      "link": "IIC Quest"
     }
   ],
   "news": [

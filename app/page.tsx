@@ -69,11 +69,18 @@ export default function Home() {
                     <span>{nextEvent.location}</span>
                   </div>
                 </div>
-                <Button className="mt-6" asChild>
-                  <Link href="/events">
-                    Register Now <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <div className="flex flex-col space-y-3 mt-6">
+                  <Button asChild>
+                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3O_Jd52RcOogmRqDzEuOWNJbThEM3QY7qt69RRRYlY2tB-w/viewform?usp=header" target="_blank">
+                      Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button variant="link" className="p-0" asChild>
+                    <Link href="HandBook.pdf" target="_blank">
+                      Read More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -105,8 +112,8 @@ export default function Home() {
             Where ideas transform into reality through collaboration, research, and innovation
           </p>
           <Button size="lg" className="animate-bounce" asChild>
-            <Link href="/join">
-              Join Now <ArrowRight className="ml-2" />
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3O_Jd52RcOogmRqDzEuOWNJbThEM3QY7qt69RRRYlY2tB-w/viewform?usp=header">
+              Register Now <ArrowRight className="ml-2" />
             </Link>
           </Button>
         </motion.div>
@@ -181,12 +188,12 @@ export default function Home() {
             <CarouselContent>
               <CarouselItem className="basis-full">
                 <div className="p-1">
-                  <Card className="p-4 mx-auto">
+                  <Card className="p-4 mx-auto shadow-lg">
                     <h3 className="font-semibold mb-2">{programs[0].title}</h3>
-                    <div className="aspect-video mb-4 rounded-lg overflow-hidden">
+                    <div className="aspect-video mb-4 rounded-lg overflow-hidden shadow-md">
                       <Video embedCode={programs[0].video} />
-              </div>
-                    <Badge variant="secondary" className="mb-2">
+                    </div>
+                    <Badge variant="secondary" className="mb-2 shadow-sm">
                       {programs[0].category}
                     </Badge>
                     <p className="text-sm text-muted-foreground">
@@ -236,17 +243,17 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">What People Say</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
           <Carousel className="max-w-4xl mx-auto">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
-                  <Card className="p-8 text-center">
+                  <Card className="p-8 text-center shadow-lg">
                     <div className="mb-6">
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
-                        className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+                        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-md"
                       />
                       <h3 className="font-semibold">{testimonial.name}</h3>
                       <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -256,7 +263,7 @@ export default function Home() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+                          className={`h-5 w-5 drop-shadow ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
                         />
                       ))}
                     </div>
@@ -275,7 +282,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
           {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
-          <div className="flex justify-center">
+          <div className="flex gap-8 justify-center">
             {upcomingEvents.map((event, index) => (
               <motion.div
                 key={index}
@@ -285,32 +292,49 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="w-96"
               >
-                <Card className="overflow-hidden">
+                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-61 object-cover shadow-md"
                   />
                   <div className="p-6">
-                    <Badge className="mb-2">{event.category}</Badge>
+                    <Badge className="mb-2 shadow-sm">{event.category}</Badge>
                     <h3 className="font-semibold mb-2">{event.title}</h3>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4 mr-2" />
+                        <Calendar className="h-4 w-4 mr-2 drop-shadow" />
                         <span>{event.date}</span>
                       </div>
                       <div className="flex items-center text-sm text-muted-foreground">
-                        <Clock className="h-4 w-4 mr-2" />
+                        <Clock className="h-4 w-4 mr-2 drop-shadow" />
                         <span>{event.time}</span>
                       </div>
                       <div className="flex items-center text-sm text-muted-foreground">
-                        <MapPin className="h-4 w-4 mr-2" />
+                        <MapPin className="h-4 w-4 mr-2 drop-shadow" />
                         <span>{event.location}</span>
                       </div>
                     </div>
-                    <Button variant="link" className="p-0">
-                      Register Now <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    {/* Use Link tag instead of Button */}
+                    <div className="flex justify-between">
+                    {event.link && (
+                      <Button asChild>
+                        <Link 
+                          href={event.link}
+                          target="_blank"
+                        >
+                          Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    )}
+                    <Link 
+                      href="HandBook.pdf"
+                      target="_blank"
+                      className="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-200 font-medium mt-4"
+                    >
+                      Read More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                    </div>
                   </div>
                 </Card>
               </motion.div>
