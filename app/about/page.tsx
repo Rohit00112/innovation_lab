@@ -138,40 +138,41 @@ export default function AboutPage() {
       </section> */}
 
       {/* Lab History */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Our Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Our Journey</h2>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-primary" />
+            {/* Timeline line - hidden on mobile */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-primary" />
+            
             {history.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 0, y: 20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="flex relative mb-12"
+                className="flex relative mb-8 md:mb-12"
                 style={{
                   justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end'
                 }}
               >
                 <div 
-                  className={`w-1/2 ${index % 2 === 0 ? 'ml-0' : 'mr-0'}`}
+                  className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:ml-0' : 'md:mr-0'}`}
                   style={{
-                    paddingLeft: index % 2 === 0 ? '0' : '3rem',
-                    paddingRight: index % 2 === 0 ? '3rem' : '0',
+                    paddingLeft: index % 2 === 0 ? '0' : 'md:3rem',
+                    paddingRight: index % 2 === 0 ? 'md:3rem' : '0',
                     textAlign: index % 2 === 0 ? 'left' : 'right'
                   }}
                 >
-                  <Card className="p-6">
-                    <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                      {index % 2 === 1 && <Badge className="px-3 py-1">{item.year}</Badge>}
-                      {item.title === "Foundation" && <Building2 className="h-6 w-6 text-primary" />}
-                      {item.title === "IIC Quest" && <Laptop className="h-6 w-6 text-primary" />}
-                      {item.title === "IIC Quest 2.0" && <Laptop className="h-6 w-6 text-primary" />}
-                      {index % 2 === 0 && <Badge className="px-3 py-1">{item.year}</Badge>}
+                  <Card className="p-4 md:p-6">
+                    <div className={`flex items-center gap-2 md:gap-4 mb-4 ${index % 2 === 0 ? 'justify-start' : 'md:justify-end'}`}>
+                      <Badge className="px-2 md:px-3 py-1 order-1 md:order-none">{item.year}</Badge>
+                      {item.title === "Foundation" && <Building2 className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
+                      {item.title === "IIC Quest" && <Laptop className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
+                      {item.title === "IIC Quest 2.0" && <Laptop className="h-5 w-5 md:h-6 md:w-6 text-primary" />}
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{item.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                   </Card>
                 </div>

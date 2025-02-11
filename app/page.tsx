@@ -281,8 +281,7 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
-          <div className="flex gap-8 justify-center">
+          <div className="flex flex-col md:flex-row gap-8 justify-center">
             {upcomingEvents.map((event, index) => (
               <motion.div
                 key={index}
@@ -290,7 +289,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="w-96"
+                className="w-full md:w-96"
               >
                 <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <img
@@ -315,10 +314,9 @@ export default function Home() {
                         <span>{event.location}</span>
                       </div>
                     </div>
-                    {/* Use Link tag instead of Button */}
-                    <div className="flex justify-between">
+                    <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
                     {event.link && (
-                      <Button asChild>
+                      <Button className="w-full sm:w-auto" asChild>
                         <Link 
                           href={event.link}
                           target="_blank"
@@ -330,7 +328,7 @@ export default function Home() {
                     <Link 
                       href="HandBook.pdf"
                       target="_blank"
-                      className="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-200 font-medium mt-4"
+                      className="inline-flex items-center justify-center sm:justify-start text-primary hover:text-primary/80 transition-colors duration-200 font-medium"
                     >
                       Read More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
