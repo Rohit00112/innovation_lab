@@ -4,8 +4,6 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    version = "5.0.0"
 
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
