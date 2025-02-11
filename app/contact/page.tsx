@@ -106,28 +106,18 @@ export default function ContactPage() {
               <Card className="p-8">
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
                 <form 
+                  name="contact"
                   className="space-y-6"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const formData = new FormData(e.currentTarget);
-                    const data = {
-                      firstName: formData.get('firstName'),
-                      lastName: formData.get('lastName'),
-                      email: formData.get('email'),
-                      phone: formData.get('phone'),
-                      message: formData.get('message')
-                    };
-                    
-                    const mailtoLink = `mailto:innovation.lab@iic.edu.np?subject=Contact Form Submission&body=First Name: ${data.firstName}%0D%0ALast Name: ${data.lastName}%0D%0AEmail: ${data.email}%0D%0APhone: ${data.phone}%0D%0A%0D%0AMessage:%0D%0A${data.message}`;
-                    
-                    window.location.href = mailtoLink;
-                  }}
                   method="POST"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
-
                 >
                   <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>
+                      Don't fill this out: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium mb-2 block">
