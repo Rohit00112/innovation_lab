@@ -122,6 +122,7 @@ export default function ContactPage() {
                     
                     window.location.href = mailtoLink;
                   }}
+                  netlify
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
