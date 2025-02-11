@@ -122,8 +122,12 @@ export default function ContactPage() {
                     
                     window.location.href = mailtoLink;
                   }}
-                  netlify
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+
                 >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium mb-2 block">
