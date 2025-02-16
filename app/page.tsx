@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col space-y-3 mt-6">
                   <Button asChild>
-                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3O_Jd52RcOogmRqDzEuOWNJbThEM3QY7qt69RRRYlY2tB-w/viewform?usp=header" target="_blank">
+                    <Link href="/registration-closed" target="_blank">
                       Register Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -112,7 +112,7 @@ export default function Home() {
             Where ideas transform into reality through collaboration, research, and innovation
           </p>
           <Button size="lg" className="animate-bounce" asChild>
-            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3O_Jd52RcOogmRqDzEuOWNJbThEM3QY7qt69RRRYlY2tB-w/viewform?usp=header">
+            <Link href="/registration-closed">
               Register Now <ArrowRight className="ml-2" />
             </Link>
           </Button>
