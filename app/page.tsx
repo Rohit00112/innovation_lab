@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col space-y-3 mt-6">
                   <Button asChild>
-                    <Link href="/registration-closed" target="_blank">
+                    <Link href="https://ox2qwgnkl.localto.net/" target="_blank">
                       Submit Now <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
@@ -327,17 +327,7 @@ export default function Home() {
                             Registration opens soon
                           </div>
                         )}
-                        {event.readmore && (
-                          <Button variant="link" className="p-0" asChild>
-                            <Link 
-                              href={event.readmore}
-                              target="_blank"
-                              className="inline-flex items-center justify-center sm:justify-start"
-                            >
-                              Read More <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
-                          </Button>
-                        )}
+                       
                       </div>
                   </div>
                 </Card>
