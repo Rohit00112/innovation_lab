@@ -72,14 +72,10 @@ export default function Home() {
                 <div className="flex flex-col space-y-3 mt-6">
                   <Button asChild>
                     <Link href="/registration-closed" target="_blank">
-                      Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                      Submit Now <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
-                  <Button variant="link" className="p-0" asChild>
-                    <Link href="HandBook.pdf" target="_blank">
-                      Read More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                 
                 </div>
               </div>
             </div>
