@@ -72,7 +72,7 @@ export default function Home() {
                 <div className="flex flex-col space-y-3 mt-6">
                   <Button asChild>
                     <Link href="https://ox2qwgnkl.localto.net/" target="_blank">
-                      Submit Now <ArrowRight className="ml-2" />
+                      Submit Here <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
                  
@@ -317,7 +317,7 @@ export default function Home() {
                               href={event.link}
                               target="_blank"
                             >
-                              Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                                Submit here <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
                         )}
