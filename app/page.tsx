@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col space-y-3 mt-6">
                   <Button asChild>
-                    <Link href="https://ox2qwgnkl.localto.net/" target="_blank">
+                    <Link href="https://hezpxdj2y.localto.net/" target="_blank">
                       Submit Here <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
