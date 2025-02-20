@@ -77,6 +77,11 @@ export default function Home() {
                   </Button>
                  
                 </div>
+                <div className="flex flex-col space-y-3 mt-6">
+                  <Link href="Event_Details.pdf" target="_blank" className="flex">
+                    View Event Details <ArrowRight className="ml-2" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
