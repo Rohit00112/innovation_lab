@@ -44,19 +44,19 @@ import { UnderConstruction } from "@/components/under-construction";
 //         <div className="container mx-auto px-4 md:px-6">
 //           <Tabs defaultValue="discussions" className="space-y-6 md:space-y-8">
 //             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto gap-2 md:gap-4">
-//               <TabsTrigger value="discussions" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-sm md:text-base">
+//               <TabsTrigger value="discussions" className="data-[state=active]:bg-[#21409A] data-[state=active]:text-white text-sm md:text-base">
 //                 <MessageSquare className="mr-2 h-3 w-3 md:h-4 md:w-4" />
 //                 Discussions
 //               </TabsTrigger>
-//               <TabsTrigger value="groups" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-sm md:text-base">
+//               <TabsTrigger value="groups" className="data-[state=active]:bg-[#21409A] data-[state=active]:text-white text-sm md:text-base">
 //                 <Users2 className="mr-2 h-3 w-3 md:h-4 md:w-4" />
 //                 Groups
 //               </TabsTrigger>
-//               <TabsTrigger value="events" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-sm md:text-base">
+//               <TabsTrigger value="events" className="data-[state=active]:bg-[#21409A] data-[state=active]:text-white text-sm md:text-base">
 //                 <Calendar className="mr-2 h-3 w-3 md:h-4 md:w-4" />
 //                 Events
 //               </TabsTrigger>
-//               <TabsTrigger value="achievements" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-sm md:text-base">
+//               <TabsTrigger value="achievements" className="data-[state=active]:bg-[#21409A] data-[state=active]:text-white text-sm md:text-base">
 //                 <Award className="mr-2 h-3 w-3 md:h-4 md:w-4" />
 //                 Achievements
 //               </TabsTrigger>
@@ -176,6 +176,9 @@ import { UnderConstruction } from "@/components/under-construction";
 
 // const { discussions, groups, communityEvents, achievements } = communityData
 
+
 export default function CommunityPage() {
-  return <UnderConstruction />;
+  return (
+    <UnderConstruction />
+  )
 }

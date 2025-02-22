@@ -18,75 +18,14 @@ import homeData from "@/data/pages/home.json"
 import { Video } from "@/components/ui/video"
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-  const [showEventModal, setShowEventModal] = useState(false)
 
-  useEffect(() => {
-    setMounted(true)
-    // Show modal on mount
-    setShowEventModal(true)
-  }, [])
 
-  if (!mounted) return null
 
-  const nextEvent = upcomingEvents[0] // Assuming the first event is the next one
+
 
   return (
     <div>
-      {/* Event Modal */}
-      {showEventModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="relative w-full max-w-2xl bg-background rounded-lg shadow-lg p-6 m-4">
-            <button
-              onClick={() => setShowEventModal(false)}
-              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            <h2 className="text-2xl font-bold mb-4">Next Upcoming Event</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="relative h-64 rounded-lg overflow-hidden">
-                <img
-                  src={nextEvent.image}
-                  alt={nextEvent.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <Badge className="mb-2">{nextEvent.category}</Badge>
-                <h3 className="text-xl font-semibold mb-4">{nextEvent.title}</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>{nextEvent.date}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-4 w-4 mr-2" />
-                    <span>{nextEvent.time}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    <span>{nextEvent.location}</span>
-                  </div>
-                </div>
-                <div className="flex flex-col space-y-3 mt-6">
-                  <Button asChild>
-                    <Link href="https://hezpxdj2y.localto.net/" target="_blank">
-                      Submit Here <ArrowRight className="ml-2" />
-                    </Link>
-                  </Button>
-                 
-                </div>
-                <div className="flex flex-col space-y-3 mt-6">
-                  <Link href="Event_Details.pdf" target="_blank" className="flex">
-                    View Event Details <ArrowRight className="ml-2" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+     
 
       {/* Rest of the page content */}
       <section className="relative h-[70vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
@@ -322,7 +261,7 @@ export default function Home() {
                               href={event.link}
                               target="_blank"
                             >
-                                Submit here <ArrowRight className="ml-2 h-4 w-4" />
+                              View Details <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
                         )}

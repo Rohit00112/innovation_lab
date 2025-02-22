@@ -8,6 +8,7 @@ import { UnderConstruction } from "@/components/under-construction";
 // import { Badge } from "@/components/ui/badge"
 // import { Button } from "@/components/ui/button"
 // import { Calendar } from "@/components/ui/calendar"
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 // import {
 //   Dialog,
 //   DialogContent,
@@ -23,6 +24,27 @@ import { UnderConstruction } from "@/components/under-construction";
 
 // export default function EventsPage() {
 //   const [date, setDate] = useState<Date | undefined>(new Date())
+//   const [activeTab, setActiveTab] = useState("upcoming")
+
+//   const filteredEvents = events.filter(event => {
+//     const eventDate = new Date(event.date)
+//     const today = new Date()
+    
+//     // If a date is selected, only show events on that date
+//     if (date) {
+//       const selectedDate = new Date(date)
+//       if (eventDate.getFullYear() !== selectedDate.getFullYear() ||
+//           eventDate.getMonth() !== selectedDate.getMonth() ||
+//           eventDate.getDate() !== selectedDate.getDate()) {
+//         return false
+//       }
+//     }
+    
+//     // Apply upcoming/past filter
+//     return activeTab === "upcoming"
+//       ? eventDate >= today
+//       : eventDate < today
+//   })
 
 //   return (
 //     <div>
@@ -69,12 +91,28 @@ import { UnderConstruction } from "@/components/under-construction";
 //               </Card>
 //             </div>
 //             <div>
-//               <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Upcoming Events</h2>
-//               <div className="space-y-4 md:space-y-6">
-//                 {events.map((event, index) => (
-//                   <EventCard key={index} event={event} index={index} />
-//                 ))}
-//               </div>
+//               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+//                 <TabsList className="grid w-full grid-cols-2 mb-8">
+//                   <TabsTrigger value="upcoming" className="data-[state=active]:bg-[#21409A] data-[state=active]:text-white">Upcoming Events</TabsTrigger>
+//                   <TabsTrigger value="past" className="data-[state=active]:bg-[#21409A] data-[state=active]:text-white">Past Events</TabsTrigger>
+//                 </TabsList>
+//                 <TabsContent value="upcoming" className="space-y-4 md:space-y-6">
+//                   {filteredEvents.map((event, index) => (
+//                     <EventCard key={index} event={event} index={index} />
+//                   ))}
+//                   {filteredEvents.length === 0 && (
+//                     <p className="text-center text-muted-foreground">No upcoming events scheduled</p>
+//                   )}
+//                 </TabsContent>
+//                 <TabsContent value="past" className="space-y-4 md:space-y-6">
+//                   {filteredEvents.map((event, index) => (
+//                     <EventCard key={index} event={event} index={index} />
+//                   ))}
+//                   {filteredEvents.length === 0 && (
+//                     <p className="text-center text-muted-foreground">No past events to display</p>
+//                   )}
+//                 </TabsContent>
+//               </Tabs>
 //             </div>
 //           </div>
 //         </div>
@@ -194,26 +232,53 @@ import { UnderConstruction } from "@/components/under-construction";
 //           <div className="flex-shrink-0">
 //             <Dialog>
 //               <DialogTrigger asChild>
-//                 <Button>Register</Button>
+//                 <Button>{new Date(event.date) >= new Date() ? "Register" : "View Details"}</Button>
 //               </DialogTrigger>
 //               <DialogContent>
 //                 <DialogHeader>
-//                   <DialogTitle>Register for {event.title}</DialogTitle>
+//                   <DialogTitle>{new Date(event.date) >= new Date() ? `Register for ${event.title}` : `${event.title} Details`}</DialogTitle>
 //                   <DialogDescription>
-//                     Complete the registration form to secure your spot.
+//                     {new Date(event.date) >= new Date() 
+//                       ? "Complete the registration form to secure your spot."
+//                       : "View the details and outcomes of this past event."}
 //                   </DialogDescription>
 //                 </DialogHeader>
-//                 <EventRegistration
-//                   eventId={event.title.toLowerCase().replace(/ /g, '-')}
-//                   eventTitle={event.title}
-//                   onSuccess={() => {
-//                     const dialog = document.querySelector('[role="dialog"]');
-//                     if (dialog) {
-//                       const closeButton = dialog.querySelector('button[aria-label="Close"]');
-//                       if (closeButton instanceof HTMLElement) closeButton.click();
-//                     }
-//                   }}
-//                 />
+//                 {new Date(event.date) >= new Date() ? (
+//                   <EventRegistration
+//                     eventId={event.title.toLowerCase().replace(/ /g, '-')}
+//                     eventTitle={event.title}
+//                     onSuccess={() => {
+//                       const dialog = document.querySelector('[role="dialog"]');
+//                       if (dialog) {
+//                         const closeButton = dialog.querySelector('button[aria-label="Close"]');
+//                         if (closeButton instanceof HTMLElement) closeButton.click();
+//                       }
+//                     }}
+//                   />
+//                 ) : (
+//                   <div className="space-y-4 py-4">
+//                     <div className="space-y-2">
+//                       <h4 className="font-medium">Event Description</h4>
+//                       <p className="text-sm text-muted-foreground">{event.description}</p>
+//                     </div>
+//                     <div className="grid grid-cols-2 gap-4">
+//                       <div className="space-y-2">
+//                         <h4 className="font-medium">Date & Time</h4>
+//                         <p className="text-sm text-muted-foreground">{event.date} at {event.time}</p>
+//                       </div>
+//                       <div className="space-y-2">
+//                         <h4 className="font-medium">Location</h4>
+//                         <p className="text-sm text-muted-foreground">{event.location}</p>
+//                       </div>
+//                     </div>
+//                     {event.outcomes && (
+//                       <div className="space-y-2">
+//                         <h4 className="font-medium">Event Outcomes</h4>
+//                         <p className="text-sm text-muted-foreground">{event.outcomes}</p>
+//                       </div>
+//                     )}
+//                   </div>
+//                 )}
 //               </DialogContent>
 //             </Dialog>
 //           </div>

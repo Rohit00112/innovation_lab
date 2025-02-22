@@ -49,7 +49,7 @@
       "title": "AI in Healthcare Symposium",
       "type": "Conference",
       "description": "Explore the latest applications of AI in healthcare with leading experts.",
-      "date": "March 10, 2024",
+      "date": "March 10, 2026",
       "time": "9:00 AM - 6:00 PM",
       "location": "Main Auditorium",
       "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
@@ -58,7 +58,7 @@
       "title": "Startup Pitch Day",
       "type": "Competition",
       "description": "Watch innovative startups pitch their ideas to industry experts.",
-      "date": "March 12, 2024",
+      "date": "March 12, 2026",
       "time": "2:00 PM - 5:00 PM",
       "location": "Innovation Hub",
       "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
@@ -67,7 +67,7 @@
       "title": "Web3 Workshop",
       "type": "Workshop",
       "description": "Hands-on workshop on blockchain and decentralized applications.",
-      "date": "March 18, 2024",
+      "date": "March 18, 2026",
       "time": "10:00 AM - 4:00 PM",
       "location": "Tech Lab",
       "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
@@ -76,10 +76,20 @@
       "title": "Research Showcase",
       "type": "Exhibition",
       "description": "Annual exhibition of groundbreaking research projects.",
-      "date": "March 25, 2024",
+      "date": "March 25, 2026",
       "time": "11:00 AM - 7:00 PM",
       "location": "Exhibition Hall",
       "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+    },
+    {
+      "title": "Creative Clash",
+      "type": "Competition",
+      "description": "This event was the first ever Creative Clash in the Itahari International College.",
+      "date":"March 15, 2024",
+      "time": "8:00 AM - 4:00 PM",
+      "location": "Innovation Lab, Main Campus",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+      "outcomes": "1st Place"
     }
   ]
 }
