@@ -3,10 +3,12 @@
     {
       "title": "IIC Quest 2.0",
       "category": "Event",
-      "video": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1055129173?badge=0&amp;autopause=0&amp;autoplay=1&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"IICQuest\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+      "video": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://www.youtube.com/embed/6s6QQ2_U__E?autoplay=1&mute=1\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"IIC QUEST | 2024 | Itahari International College\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></div>",
       "description": "IIC Quest 2.0 was a three-day program featuring a 36-hour intensive hackathon with participation from various colleges across the Purwanchal region of Nepal. The event also included a Job Fair, where more than ten renowned companies from across Nepal sought to recruit talented students and graduates, and a Final Year Project Showcase, providing students with the opportunity to present their projects to potential employers."
     }
   ],
+
+  
   "testimonials": [
     {
       "name": "Er. Santosh Parajuli",
